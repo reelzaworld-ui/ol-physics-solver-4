@@ -1,0 +1,319 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Simple Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    /* Navigation */
+    nav {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #0f172a, #0369a1);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: white;
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    section > p {
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #0369a1;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact {
+      background: #e0f2fe;
+    }
+
+    .contact button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h2>MyWeb</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome 👋</h1>
+      <p>Simple • Modern • Responsive Website</p>
+
+      <a href="#about" class="btn">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+
+    <p>
+      මේක ඔයාට අවශ්‍ය විදිහට වෙනස් කරගන්න පුළුවන් සරල website එකක්.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>
+          Website එක ඉක්මනින් load වෙන විදිහට simple design එකක්.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Responsive</h3>
+        <p>
+          Phone, tablet සහ computer වලට හොඳින් ගැලපෙනවා.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✨ Modern</h3>
+        <p>
+          Clean සහ modern interface එකක්.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <p>අපි ලබාදෙන සේවාවන්</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🌐 Web Design</h3>
+        <p>
+          Modern websites design කිරීම.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💻 Development</h3>
+        <p>
+          HTML, CSS සහ JavaScript භාවිතයෙන් websites නිර්මාණය කිරීම.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Graphics</h3>
+        <p>
+          Logos, posters සහ social media designs.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+      අපිත් එක්ක සම්බන්ධ වෙන්න.
+    </p>
+
+    <button class="btn" onclick="contactMessage()">
+      Contact
+    </button>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 MyWeb. All Rights Reserved.</p>
+  </footer>
+
+
+  <script>
+    function contactMessage() {
+      alert("Thanks for contacting us! 😊");
+    }
+  </script>
+
+</body>
+</html>
+```
